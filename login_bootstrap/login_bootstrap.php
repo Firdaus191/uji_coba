@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Artha Cerdas</title>
+    <title>Login - PDI</title>
     <meta name="color-scheme" content="light dark">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie.min.js"></script>
@@ -76,8 +76,8 @@
     width: 500px; height: 500px; z-index: 2000; display: none; pointer-events: none;"></div>
 
     <main class="form-login text-center">
-        <img src="logo.png" alt="Logo Artha Cerdas" class="logo" loading="lazy">
-        <div class="form-title">Artha Cerdas Semarang</div>
+        <img src="pdi.png" alt="PDI" class="logo" loading="lazy">
+        <div class="form-title">PDI Semarang</div>
 
         <!-- Alert gagal login -->
         <div id="loginAlert" class="alert alert-danger alert-box py-2">
@@ -98,7 +98,7 @@
                 <label class="form-check-label" for="rememberMe">Ingat saya</label>
             </div>
             <button class="btn btn-primary w-100" type="submit">Masuk</button>
-            <p class="mt-4 mb-0 text-muted small">&copy; 2017–2025 Artha Cerdas SMG</p>
+            <p class="mt-4 mb-0 text-muted small">&copy; 2017–2025 PDI SMG</p>
         </form>
     </main>
 
