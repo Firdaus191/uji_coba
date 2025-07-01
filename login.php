@@ -15,34 +15,40 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <head>
         <title>Login Page</title>
         <style type="text/css">
-            body{
+            body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
+                background: #f9c5d1; /* pink muda */
+                background-image: url("bg_pinki.jpg"); /* gunakan file baru */
                 background-size: cover;
-                background: #020024;
-                background-image: url("bg_pink.png");
                 background-attachment: fixed;
             }
-            table{
-                background-color: white;
-                border: 4px solid #ddd;
+
+            table {
+                background-color: rgba(255, 240, 245, 0.9); /* pink sangat muda transparan */
+                border: 4px solid #f4b6c2; /* pink medium */
                 padding: 20px;
                 border-radius: 20px;
-                font-family:Arial, Helvetica, sans-serif;
-                box-shadow: 0px 10px 20px black
+                font-family: 'Poppins', sans-serif;
+                box-shadow: 0px 10px 20px rgba(216, 112, 147, 0.5); /* bayangan pink */
             }
-            td{
-                padding: 10px;
-            }
-            button{
-                background-color: #4F7BFF;
+
+            button {
+                background-color: #e75480; /* pink tua */
                 color: white;
                 padding: 10px;
                 border: 0;
                 border-radius: 5px;
                 width: 100%;
+                font-weight: bold;
+                font-size: 16px;
+                transition: background-color 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #d6336c;
             }
         </style>
     </head>

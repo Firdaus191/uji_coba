@@ -49,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
 
         if ($umur >= 1 && $umur <= 5) {
             $keterangan = 'Balita';
-        } elseif ($umur > 5 && $umur <= 14) {
-            $keterangan = 'Anak Kecil';
-        } elseif ($umur >= 17 && $umur <= 25) {
+        } elseif ($umur > 5 && $umur <= 12) {
+            $keterangan = 'Anak-anak';
+        } elseif ($umur >= 13 && $umur <= 20) {
             $keterangan = 'Remaja';
-        } elseif ($umur > 25 && $umur <= 55) {
+        } elseif ($umur > 21 && $umur <= 60) {
             $keterangan = 'Dewasa';
-        } elseif ($umur > 55 && $umur <= 100) {
+        } elseif ($umur > 60 && $umur <= 100) {
             $keterangan = 'Tua';
         } else {
             $keterangan = 'Tidak Diketahui';
@@ -93,20 +93,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             height: 100vh;
-            background-image: url("bg_pink.jpg");
+            background-image: url("bg_pinki.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: white;
+            color: #333;
         }
 
         form {
-            background-color: #1E2235;
+            background-color:rgba(255, 240, 245, 0.9);
             padding: 30px;
             border-radius: 16px;
             max-width: 600px;
             width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(216, 112, 147, 0.4);
             margin-bottom: 30px;
         }
 
@@ -124,8 +124,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
             padding: 12px 15px;
             border: none;
             border-radius: 10px;
-            background-color: #2A2E45;
-            color: #fff;
+            background-color: #f9c5d1;
+            color: #333;
             font-size: 16px;
             margin-top: 5px;
         }
@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
         }
 
         button[type="submit"] {
-            background-color: #4F7BFF;
+            background-color: #e75480;
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -148,23 +148,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
         }
 
         button[type="submit"]:hover {
-            background-color: #3A63D8;
+            background-color: #d6336c;
         }
 
-        .btn-logout {
-            background-color: #FF4C4C;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            border: none;
-            margin-top: 10px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
-        .btn-close {
-            background-color: #4F7BFF;
+        .btn-logout, .btn-close {
+            background-color: #d6336c;
             color: white;
             padding: 12px 20px;
             border-radius: 10px;
@@ -179,7 +167,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
             border-collapse: collapse;
             width: 100%;
             max-width: 800px;
-            background: #1F2937;
+            background: rgba(255, 240, 245, 0.95);
+            color: #333;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -193,7 +182,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
         }
 
         table.data-table th {
-            background-color: #374151;
+            background-color: #e75480;
             font-weight: bold;
         }
 
@@ -202,18 +191,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
         }
 
         .btn-edit {
-            background-color: orange;
+            background-color: #f9a6b7;
             padding: 8px 16px;
             font-size: 14px;
             margin-right: 5px;
             border-radius: 10px;
-            color: black;
+            color: white;
             font-weight: 600;
             text-decoration: none;
         }
 
         .btn-delete {
-            background-color: #FF4C4C;
+            background-color: #d6336c;
             padding: 8px 16px;
             font-size: 14px;
             border-radius: 10px;
@@ -251,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
     </style>
 </head>
 <body>
-    <h1><?php echo "Selamat datang " . $_SESSION['username'] . " Ke-" . $_SESSION['counter']; ?></h1>
+    <h1 style="color: #e75480;"><?php echo "Selamat datang " . $_SESSION['username'] . " Ke-" . $_SESSION['counter']; ?></h1>
 
     <form method="post">
         <input type="hidden" name="edit_index" value="<?= $editMode ? $editIndex : '' ?>">
@@ -263,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
             </tr>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama" required value="<?= htmlspecialchars($editData['nama']) ?>" placeholder="John Carter" /></td>
+                <td><input type="text" name="nama" required value="<?= htmlspecialchars($editData['nama']) ?>" placeholder="Tino Mulyono" /></td>
             </tr>
             <tr>
                 <td>Umur</td>

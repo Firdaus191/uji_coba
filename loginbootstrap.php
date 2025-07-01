@@ -23,6 +23,7 @@
         html,
         body {
             height: 100%;
+            background: #f9c5d1;
         }
 
         .form-signin {
@@ -99,19 +100,19 @@
         }
 
         .btn-bd-primary {
-            --bd-violet-bg: #1574D0;
-            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            --bd-violet-bg: #e75480;
+            --bd-violet-rgb: 231, 84, 128;
             --bs-btn-font-weight: 600;
             --bs-btn-color: var(--bs-white);
             --bs-btn-bg: var(--bd-violet-bg);
             --bs-btn-border-color: var(--bd-violet-bg);
             --bs-btn-hover-color: var(--bs-white);
-            --bs-btn-hover-bg:rgb(19, 100, 182);
-            --bs-btn-hover-border-color: #1574D0;
+            --bs-btn-hover-bg:#d6336c;
+            --bs-btn-hover-border-color: #e75480;
             --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
             --bs-btn-active-color: var(--bs-btn-hover-color);
-            --bs-btn-active-bg: #1574D0;
-            --bs-btn-active-border-color: #1574D0;
+            --bs-btn-active-bg: #e75480;
+            --bs-btn-active-border-color: #e75480;
         }
 
         .bd-mode-toggle {
