@@ -40,7 +40,7 @@
         }
 
         .logo {
-            height: 80px;
+            height: 150px;
             margin-bottom: 1rem;
         }
 
@@ -77,11 +77,11 @@
 
     <main class="form-login text-center">
         <img src="pdi.png" alt="PDI" class="logo" loading="lazy">
-        <div class="form-title">PDI Semarang</div>
+        <div class="form-title">Silahkan Login</div>
 
-        <!-- Alert gagal login -->
+        <!-- Alert -->
         <div id="loginAlert" class="alert alert-danger alert-box py-2">
-            Login gagal
+            Username atau Password salah
         </div>
 
         <form id="loginForm">
@@ -95,29 +95,26 @@
             </div>
             <div class="form-check text-start mb-3">
                 <input class="form-check-input" type="checkbox" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Ingat saya</label>
+                <label class="form-check-label" for="rememberMe">Ingatkan saya</label>
             </div>
             <button class="btn btn-primary w-100" type="submit">Masuk</button>
             <p class="mt-4 mb-0 text-muted small">&copy; 2017–2025 PDI SMG</p>
         </form>
     </main>
 
-    <!-- Mode Switcher -->
     <div class="theme-toggle">
         <select id="themeSelect" class="form-select form-select-sm" onchange="changeTheme(this.value)">
-            <option value="auto" selected>🌗 Otomatis</option>
-            <option value="light">☀️ Terang</option>
-            <option value="dark">🌙 Gelap</option>
+            <option value="auto" selected>🌗 Auto</option>
+            <option value="light">☀️ Light</option>
+            <option value="dark">🌙 Drak</option>
         </select>
     </div>
 
     <script>
-        // Saat halaman selesai dimuat
         window.addEventListener("DOMContentLoaded", () => {
             document.body.classList.add("loaded");
         });
 
-        // Fungsi ubah tema dengan animasi Lottie
         function changeTheme(value) {
             const html = document.documentElement;
             const body = document.body;
@@ -156,7 +153,6 @@
             }, 2000);
         }
 
-        // Terapkan tema tersimpan
         window.addEventListener("load", () => {
             const saved = localStorage.getItem('theme-mode');
             if (saved) {
@@ -165,15 +161,12 @@
             }
         });
 
-        // Validasi login
-        // Validasi login
         document.getElementById("loginForm").addEventListener("submit", function(e) {
             e.preventDefault();
             const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value.trim();
             const alertBox = document.getElementById("loginAlert");
 
-            // Ambil user dari localStorage (kalau belum ada, pakai default usm/123)
             const savedUser = JSON.parse(localStorage.getItem("userData")) || {
                 username: "usm",
                 password: "123"
