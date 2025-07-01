@@ -272,7 +272,7 @@ session_start();
 
     function logout() {
       sessionStorage.removeItem("loggedIn");
-      window.location.href = "logout-bootstrap.php";
+      window.location.href = "logout_bootstrap.php";
     }
 
     function toggleEditUser() {
