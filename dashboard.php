@@ -93,7 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nama']) && isset($_POS
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             height: 100vh;
-            background-image: url("bg.png");
+            background-image: url("bg_pink.jpg");
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             color: white;
         }

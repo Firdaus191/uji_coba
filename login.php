@@ -20,11 +20,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 justify-content: center;
                 align-items: center;
                 height: 100vh;
+                background: url("marek-piwnicki-RNSsgnkW5SU-unsplash.jpg") no-repeat center center fixed;
                 background-size: cover;
-                background: #020024;
-                background-image: url("bg.png");
-                background-attachment: fixed;
-            }
+            }   
             table{
                 background-color: white;
                 border: 4px solid #ddd;
